@@ -1,3 +1,6 @@
+# Week 3
+ - [ ] Create the chaining Process
+ - [ ] Workout the proof of work aspect
 # Week 2
 
  - [x] Create test cases for a robust block class
