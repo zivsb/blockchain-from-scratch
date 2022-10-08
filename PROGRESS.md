@@ -1,6 +1,13 @@
 # Week 3
- - [ ] Create the chaining Process
+ - [x] Create a Blockchain class
+    - [x] Define the class
+    - [x] Chain Validation Tests
+    - [x] Pass Chain Validation Tests
  - [ ] Workout the proof of work aspect
+    - [ ] Study Nonce Value
+    - [ ] Implement Nonce value
+    - [ ] Implement Dynamic Difficulty
+
 # Week 2
 
  - [x] Create test cases for a robust block class
