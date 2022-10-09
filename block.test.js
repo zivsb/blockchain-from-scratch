@@ -1,4 +1,5 @@
 //the .js extension is implicitly set by node js
+const hexToBinary = require('hex-to-binary');
 const Block = require("./block");
 const { GENESIS_DATA, MINE_RATE } = require("./config");
 const cryptoHash = require("./crypto-hash");
@@ -79,7 +80,7 @@ describe('Block', () => {
         });
 
         it('sets a `hash` that matches the difficulty criteria', () => {
-            expect(result.hash.substring(0, result.difficulty))
+            expect(hexToBinary(result.hash).substring(0, result.difficulty))
             .toEqual('0'.repeat(result.difficulty));
         });
 
