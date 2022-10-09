@@ -4,7 +4,7 @@
     - [x] Chain Validation Tests
     - [x] Pass Chain Validation Tests
  - [ ] Workout the proof of work aspect
-    - [ ] Study Nonce Value
+    - [x] Study Nonce Value
     - [ ] Implement Nonce value
     - [ ] Implement Dynamic Difficulty
 
