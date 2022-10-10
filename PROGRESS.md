@@ -3,17 +3,23 @@
     - [x] Define the class
     - [x] Chain Validation Tests
     - [x] Pass Chain Validation Tests
- - [ ] Workout the proof of work aspect
+ - [x] Workout the proof of work aspect
     - [x] Study Nonce Value
-    - [ ] Implement Nonce value
-    - [ ] Implement Dynamic Difficulty
+    - [X] Implement Nonce value
+    - [X] Implement Dynamic Difficulty
+ - [ ] Implement an API for the backend created
+    - [ ] research express API
+    - [ ] set up the API
+    - [ ] run the blockchain on one device
+    - [ ] run the blockchain on two devices
+    - [ ] utillize the working API to create a chat app on the blockchain to confirm it works
 
 # Week 2
 
  - [x] Create test cases for a robust block class
  - [x] Create a first iteration of the block class
  - [x] Pass the test block classes test cases
- - [ ] Start the chaining process in the blockchain class
+ - [x] Start the chaining process in the blockchain class
 
 # Week 1
 
