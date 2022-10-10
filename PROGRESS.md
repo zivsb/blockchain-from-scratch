@@ -1,4 +1,4 @@
-#Blockchain from the Ground Up, a Learning Project
+# Blockchain from the Ground Up, a Learning Project
 
 # Week 3
  - [x] Create a Blockchain class
