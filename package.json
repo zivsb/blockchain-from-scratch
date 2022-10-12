@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watchAll",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "coverage": "react-scripts test --coverage --watchAll=false"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,25 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "hex-to-binary": "^1.0.1"
+    "hex-to-binary": "^1.0.1",
+    "react-scripts": "^5.0.1"
+  },
+  "jest": {
+    "resetMocks": true,
+    "collectCoverageFrom": [
+      "*.{js,jsx,ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
   }
 }

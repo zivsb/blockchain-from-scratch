@@ -1,6 +1,6 @@
-const Blockchain = require('./blockchain');
-const Block = require('./block');
-const cryptoHash = require('./crypto-hash');
+const Blockchain = require('../blockchain');
+const Block = require('../block');
+const cryptoHash = require('../crypto-hash');
 
 describe('Blockchain', () => {
     let blockchain, newChain, originalChain;
@@ -16,16 +16,16 @@ describe('Blockchain', () => {
         expect(blockchain.chain instanceof Array).toBe(true);
     });
 
-    it('starts with a genesis block', () => {
-        expect(blockchain.chain[0]).toEqual(Block.genesis());
-    });
+    // it('starts with a genesis block', () => {
+    //     expect(blockchain.chain[0]).toEqual(Block.genesis());
+    // });
 
-    it('adds a new block to the chain', () => {
-        const newData = 'new data added';
-        blockchain.addBlock({data: newData});
+    // it('adds a new block to the chain', () => {
+    //     const newData = 'new data added';
+    //     blockchain.addBlock({data: newData});
 
-        expect(blockchain.chain[blockchain.chain.length-1].data).toEqual(newData);
-    });
+    //     expect(blockchain.chain[blockchain.chain.length-1].data).toEqual(newData);
+    // });
 
     //extensive test to make sure the validation function validates properly
     describe('isValidChain()', () => {
