@@ -1,6 +1,11 @@
 # Blockchain from the Ground Up, a Learning Project
 
+# Week 4
+Aim to build and start implementing a cryptocurrency on top of the blockchain. I hope to implement basic wallets and keys this week.
+
 # Week 3
+Spent excessive time researching peer to peer networks and implementation and ended up implementing a publisher-subscriber pattern through redis instead. Implemented a chatt app through redis to understand the pub/sub patter then used similar logic and applied it to the blockchain network.
+
  - [x] Create a Blockchain class
     - [x] Define the class
     - [x] Chain Validation Tests
@@ -9,12 +14,7 @@
     - [x] Study Nonce Value
     - [X] Implement Nonce value
     - [X] Implement Dynamic Difficulty
- - [ ] Implement an API for the backend created
-    - [ ] research express API
-    - [ ] set up the API
-    - [ ] run the blockchain on one device
-    - [ ] run the blockchain on two devices
-    - [ ] utillize the working API to create a chat app on the blockchain to confirm it works
+ - [ ]
 
 # Week 2
 
