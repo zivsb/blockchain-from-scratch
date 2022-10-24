@@ -1,7 +1,9 @@
 # Blockchain from the Ground Up, a Learning Project
+# Week 5
+Aim to figure out the elliptic module and implement keys and transactions.
 
 # Week 4
-Aim to build and start implementing a cryptocurrency on top of the blockchain. I hope to implement basic wallets and keys this week.
+Researched elliptic cryptography online and attempted to implement it through the elliptic module but have been running into compiler error after compiler error as I tried to implement public and private key cryptographies.
 
 # Week 3
 Spent excessive time researching peer to peer networks and implementation and ended up implementing a publisher-subscriber pattern through redis instead. Implemented a chatt app through redis to understand the pub/sub patter then used similar logic and applied it to the blockchain network.

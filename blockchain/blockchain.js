@@ -1,6 +1,6 @@
 const Block = require('./block');
-const cryptoHash = require('./crypto-hash');
-const cyptoHash = require('./crypto-hash');
+const cryptoHash = require('../util/crypto-hash');
+const cyptoHash = require('../util/crypto-hash');
 
 //Basic blockchain requirements:
 //  Start with the genesis block
