@@ -19,13 +19,13 @@ describe('Wallet', () => {
     });
 
     describe('signing data', () => {
-        const data = 'foobar';
+        const data = 'random data lol';
 
         
         it('verifies a signature', () => {
-            console.log(wallet.sign(data));
+            //console.log(wallet.sign(data));
             expect(verifySignature({
-                publicKey: wallet.data,
+                publicKey: wallet.publicKey,
                 data,
                 signature: wallet.sign(data)
             })).toBe(true);
