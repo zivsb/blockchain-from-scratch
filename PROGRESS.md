@@ -1,6 +1,11 @@
 # Blockchain from the Ground Up, a Learning Project
+
+# Week 6
+Aim to Implement a transaction miner class that can validate and broadcast a given transaction pool.
+Transaction miner should: check and validate each transaction in the pool, generate a reward for the miner, broadcast the new blockchain, and clear the transaction pool after validating the transactions.
+
 # Week 5
-Aim to figure out the elliptic module and implement keys and transactions.
+Implemented individual transactions along with a transaction pool. Implemented the transaction pool and transaction broadcasting into the main app.
 
 # Week 4
 Researched elliptic cryptography online and attempted to implement it through the elliptic module but have been running into compiler error after compiler error as I tried to implement public and private key cryptographies.
