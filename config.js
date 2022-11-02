@@ -13,4 +13,10 @@ const GENESIS_DATA = {
 
 const STARTING_BALANCE = 10;
 
-module.exports = { GENESIS_DATA, MINE_RATE, STARTING_BALANCE };
+const REWARD_INPUT = {
+    address: '*authorized-reward*'
+};
+
+const MINING_REWARD = 10;
+
+module.exports = { GENESIS_DATA, MINE_RATE, STARTING_BALANCE, REWARD_INPUT, MINING_REWARD };
