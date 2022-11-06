@@ -9,6 +9,10 @@ class TransactionPool {
         this.transactionMap[transaction.id] = transaction;
     }
 
+    clear() {
+        this.transactionMap = {};
+    }
+
     setMap(transactionMap) {
         this.transactionMap = transactionMap;
     }
@@ -24,6 +28,22 @@ class TransactionPool {
             return Transaction.validTransaction(transaction);
         });
     }
+
+    clearBlockchainTransactions({ chain }) {
+        //start at 1 to skip genesis block
+        for (let i = 1; i < chain.length; i++) {
+            const block = chain[i];
+
+            //go through every transaction of the block.data
+            //delete the transactions in the pool that are mined
+            for (let transaction of block.data) {
+                if (this.transactionMap[transaction.id]) {
+                    delete this.transactionMap[transaction.id];
+                }
+            }
+        }
+    }
+    
 }
 
 module.exports = TransactionPool;

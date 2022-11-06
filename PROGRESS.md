@@ -1,8 +1,12 @@
 # Blockchain from the Ground Up, a Learning Project
 
 # Week 6
+
+# Week 6
 Aim to Implement a transaction miner class that can validate and broadcast a given transaction pool.
 Transaction miner should: check and validate each transaction in the pool, generate a reward for the miner, broadcast the new blockchain, and clear the transaction pool after validating the transactions.
+
+Implemented API methods such as ways to view addresses' possessed currency and supporting functionallity such as mining rewards, ways to calculate balances, and ways to clear mined transactions.
 
 # Week 5
 Implemented individual transactions along with a transaction pool. Implemented the transaction pool and transaction broadcasting into the main app.
