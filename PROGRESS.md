@@ -1,6 +1,7 @@
 # Blockchain from the Ground Up, a Learning Project
 
-# Week 6
+# Week 7
+Aim to finish the mining and api algorithm (finalize backend). Start looking to deploy the app on a raspberry pi and/or heroku.
 
 # Week 6
 Aim to Implement a transaction miner class that can validate and broadcast a given transaction pool.
