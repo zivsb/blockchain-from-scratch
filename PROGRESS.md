@@ -26,7 +26,6 @@ Spent excessive time researching peer to peer networks and implementation and en
     - [x] Study Nonce Value
     - [X] Implement Nonce value
     - [X] Implement Dynamic Difficulty
- - [ ]
 
 # Week 2
 
