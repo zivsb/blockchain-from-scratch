@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest --watchAll",
     "start": "node index.js",
-    "dev": "npm run start-redis && nodemon index.js",
+    "dev": "npm run start-redis && cross-env ENV='development' nodemon index.js",
     "coverage": "react-scripts test --coverage --watchAll=false",
-    "dev-peer": "cross-env GENERATE_PEER_PORT='true' nodemon index.js",
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
     "start-redis": "redis-server --daemonize yes"
   },
   "repository": {
