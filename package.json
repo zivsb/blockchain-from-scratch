@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest --watchAll",
     "start": "node index.js",
-    "dev": "npm run start-redis && cross-env ENV='development' nodemon index.js",
+    "dev": "npm run start-redis && nodemon index.js",
     "coverage": "react-scripts test --coverage --watchAll=false",
-    "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' nodemon index.js",
     "start-redis": "redis-server --daemonize yes"
   },
   "repository": {
@@ -36,7 +36,6 @@
     "react-scripts": "^5.0.1",
     "redis": "^2.8.0",
     "request": "^2.88.0",
-    "type-fest": "^3.2.0",
     "uuid": "^3.3.2"
   },
   "jest": {
@@ -57,9 +56,5 @@
       "lcov"
     ],
     "testEnvironment": "node"
-  },
-  "engines": {
-    "npm": ">=8.0.0 <9.0.0",
-    "node": ">=16.0.0 <17.0.0"
   }
 }

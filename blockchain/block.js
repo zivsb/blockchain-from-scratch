@@ -29,7 +29,6 @@ class Block {
 
     //use notation 'mine' instead of 'create'
     //emphasizes that computing power is required to create a new block
-    
     static mineBlock( {lastBlock, data}) {
         // saving the timestamp at the time of calling
         // consistent timestamp throughout running of function

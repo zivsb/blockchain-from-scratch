@@ -8,23 +8,15 @@ const Wallet = require('./wallet/wallet');
 const { response, application } = require('express');
 const TransactionMiner = require('./app/transaction-miner');
 
-const isDevelopment = process.ENV === 'development';
-
-const REDIS_URL = isDevelopment ?
-    'redis://127.0.0.1:6379' :
-    'redis://:pca2b42f6a8e0e178821bccf798eace73c05184fe8b555006469f454993479fef@ec2-44-210-199-150.compute-1.amazonaws.com:7009';
-const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
-
 const app = express();
 const blockchain = new Blockchain();
 const transactionPool = new TransactionPool();
 const wallet = new Wallet();
-const pubsub = new PubSub({ blockchain, transactionPool, wallet, redisURL: REDIS_URL });
+const pubsub = new PubSub({ blockchain, transactionPool, wallet });
 const transactionMiner = new TransactionMiner({ blockchain, transactionPool, wallet, pubsub});
 
-
-
+const DEFAULT_PORT = 3000;
+const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
 
 
 //configuring node to rely on this dependency
@@ -125,7 +117,7 @@ if (process.env.GENERATE_PEER_PORT === 'true') {
 
 //TODO: research ports
 //just using default reccomended 3000 for time being
-const PORT = process.ENV.PORT || PEER_PORT || DEFAULT_PORT;
+const PORT = PEER_PORT || DEFAULT_PORT;
 app.listen(PORT, () => {
     console.log(`listening at localhost:${PORT}`);
 
