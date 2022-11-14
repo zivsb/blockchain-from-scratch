@@ -1,7 +1,10 @@
 # Blockchain from the Ground Up, a Learning Project
 
+# Week 8
+Start implementing a front end on react and try to deploy the app again.
+
 # Week 7
-Aim to finish the mining and api algorithm (finalize backend). Start looking to deploy the app on a raspberry pi and/or heroku.
+Finalized the API, mining algorithm, and backend as a whole. Presented an mvp to the class. Multiple attempts to deploy through heroku but resulted in crashes. Looked into creating a front end with react.
 
 # Week 6
 Aim to Implement a transaction miner class that can validate and broadcast a given transaction pool.
