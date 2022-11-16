@@ -1,6 +1,7 @@
 const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
+const path = require('path');
 const Blockchain = require('./blockchain/blockchain');
 const PubSub = require('./app/pubsub');
 const TransactionPool = require('./wallet/transaction-pool');
@@ -22,6 +23,7 @@ const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
 //configuring node to rely on this dependency
 //bodyParser parses requests bodies as objects before the handlers
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'client/dist')));
 
 //a callback function executes whenever
 //someone make an api/blocks request
@@ -89,6 +91,10 @@ app.get( '/api/wallet-info' , (req, res) => {
     });
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+});
+
 const syncWithRootState = () => {
     request({ url: `${ROOT_NODE_ADDRESS}/api/blocks` }, (error, response, body) => {
         if(!error && response.statusCode === 200) {
@@ -108,6 +114,47 @@ const syncWithRootState = () => {
         }
     });
 };
+
+const wallet1 = new Wallet();
+const wallet2 = new Wallet();
+
+const generateWalletTransaction = ({wallet, recipient, amount}) => {
+    const transaction = wallet.createTransaction({
+        recipient, amount, chain: blockchain.chain
+    });
+
+    transactionPool.setTransaction(transaction);
+};
+
+const walletAction = () => generateWalletTransaction({
+    wallet, recipient: wallet1.publicKey, amount: 0.2
+});
+
+const wallet1Action = () => generateWalletTransaction({
+    wallet: wallet1, recipient: wallet2.publicKey, amount: 0.4
+});
+
+const wallet2Action = () => ({
+    wallet: wallet2, recipient: wallet.publicKey, amount: 1
+});
+
+for (let i = 0; i < 10; i++) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            walletAction();
+            wallet1Action();
+            break;
+        case 1:
+            walletAction();
+            wallet2Action();
+            break;
+        default:
+            wallet1Action();
+            wallet2Action();
+    }
+
+    transactionMiner.mineTransactions();
+}
 
 let PEER_PORT;
 
