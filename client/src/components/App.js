@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Blocks from './Blocks'
+import { Link } from 'react-router-dom';
 
 class App extends Component{
     state = { walletInfo: {  } };
     
     componentDidMount() {
-        fetch('http://localhost:3000/api/wallet-info')
+        fetch(`${document.location.origin}/api/wallet-info`)
             .then(response => response.json())
             .then(json => this.setState({ walletInfo: json }));
     }
@@ -17,12 +17,14 @@ class App extends Component{
             <div className='App'>
                 <div><h1>Zivcoin</h1></div>
                 <br />
+                <div><Link to ='/blocks'>View Blocks</Link></div>
+                <div><Link to='/conduct-transaction'>Conduct a Transaction</Link></div>
+                <div><Link to='/transaction-pool'>Transaction Pool</Link></div>
+                <br />
                 <div className='WalletInfo'>
                     <div>Address: {address}</div>
                     <div>Balance: {balance}</div>
                 </div>
-                <br />
-                <Blocks />
             </div>
         );
     }
