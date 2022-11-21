@@ -127,11 +127,11 @@ const generateWalletTransaction = ({wallet, recipient, amount}) => {
 };
 
 const walletAction = () => generateWalletTransaction({
-    wallet, recipient: wallet1.publicKey, amount: 0.2
+    wallet, recipient: wallet1.publicKey, amount: 3
 });
 
 const wallet1Action = () => generateWalletTransaction({
-    wallet: wallet1, recipient: wallet2.publicKey, amount: 0.4
+    wallet: wallet1, recipient: wallet2.publicKey, amount: 2
 });
 
 const wallet2Action = () => ({

@@ -1,7 +1,10 @@
 # Blockchain from the Ground Up, a Learning Project
 
+# Week 9
+Work on piecing together a demo video and if time allows stylize the web app more.
+
 # Week 8
-Start implementing a front end on react and try to deploy the app again.
+Failed attempt at Dokku Deployment. Incorporated an unstylized fully functional front end with react that can make all API Calls.
 
 # Week 7
 Finalized the API, mining algorithm, and backend as a whole. Presented an mvp to the class. Multiple attempts to deploy through heroku but resulted in crashes. Looked into creating a front end with react.
