@@ -28,7 +28,7 @@ class App extends Component{
             .then(json => this.setState({ walletInfo: json }));
         fetch(`${document.location.origin}/api/blocks`)
             .then(response => response.json())
-            .then(json => this.setState({ blocks: json }));
+            .then(json => this.setState({ blocks: json}));
     }
 
     render() {
