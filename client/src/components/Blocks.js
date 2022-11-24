@@ -18,7 +18,8 @@ class Blocks extends Component {
                 <div><Link to='/'>Home</Link></div>
                 <h2>Blocks:</h2>
                 {
-                    this.state.blocks.map((block) => {
+                    //this.state.blocks.reverse();
+                    this.state.blocks.reverse().map((block) => {
                         return (
                             <Block key={block.hash} block={block} />
                         )

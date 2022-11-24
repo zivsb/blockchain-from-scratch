@@ -61,9 +61,10 @@ class Block extends Component {
     render() {
         console.log('this.displayTransaction', this.displayTransaction);
 
-        const { timestamp, hash } = this.props.block;
+        const { timestamp, hash, lastHash } = this.props.block;
 
         const subHash = `${hash.substring(0, 10)}...`;
+        const subLastHash = `${lastHash.substring(0, 10)}...`;
        
 
         //const dataDisplay = `${stringifiedData}`
@@ -72,6 +73,7 @@ class Block extends Component {
             <div className="Block">
                 <hr />
                 <div>Hash: {subHash}</div>
+                <div>lastHash: {subLastHash}</div>
                 <div>Mined on: {(new Date(timestamp)).toLocaleDateString()}</div>
 
                 {this.displayTransaction}

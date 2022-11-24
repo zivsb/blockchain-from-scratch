@@ -115,46 +115,49 @@ const syncWithRootState = () => {
     });
 };
 
-const wallet1 = new Wallet();
-const wallet2 = new Wallet();
+// Development code for having a few transactions in the blockchain when I start it up
 
-const generateWalletTransaction = ({wallet, recipient, amount}) => {
-    const transaction = wallet.createTransaction({
-        recipient, amount, chain: blockchain.chain
-    });
+// const wallet1 = new Wallet();
+// const wallet2 = new Wallet();
 
-    transactionPool.setTransaction(transaction);
-};
+// const generateWalletTransaction = ({wallet, recipient, amount}) => {
+//     const transaction = wallet.createTransaction({
+//         recipient, amount, chain: blockchain.chain
+//     });
 
-const walletAction = () => generateWalletTransaction({
-    wallet, recipient: wallet1.publicKey, amount: 3
-});
+//     transactionPool.setTransaction(transaction);
+// };
 
-const wallet1Action = () => generateWalletTransaction({
-    wallet: wallet1, recipient: wallet2.publicKey, amount: 2
-});
 
-const wallet2Action = () => ({
-    wallet: wallet2, recipient: wallet.publicKey, amount: 1
-});
+// const walletAction = () => generateWalletTransaction({
+//     wallet, recipient: wallet1.publicKey, amount: 3
+// });
 
-for (let i = 0; i < 10; i++) {
-    switch (Math.floor(Math.random() * 3)) {
-        case 0:
-            walletAction();
-            wallet1Action();
-            break;
-        case 1:
-            walletAction();
-            wallet2Action();
-            break;
-        default:
-            wallet1Action();
-            wallet2Action();
-    }
+// const wallet1Action = () => generateWalletTransaction({
+//     wallet: wallet1, recipient: wallet2.publicKey, amount: 2
+// });
 
-    transactionMiner.mineTransactions();
-}
+// const wallet2Action = () => ({
+//     wallet: wallet2, recipient: wallet.publicKey, amount: 1
+// });
+
+// for (let i = 0; i < 10; i++) {
+//     switch (Math.floor(Math.random() * 3)) {
+//         case 0:
+//             walletAction();
+//             wallet1Action();
+//             break;
+//         case 1:
+//             walletAction();
+//             wallet2Action();
+//             break;
+//         default:
+//             wallet1Action();
+//             wallet2Action();
+//     }
+
+//     transactionMiner.mineTransactions();
+// }
 
 let PEER_PORT;
 
