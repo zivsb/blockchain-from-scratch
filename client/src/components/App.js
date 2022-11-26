@@ -12,7 +12,7 @@ class App extends Component{
     }
 
     get showButton() {
-        if (this.state.blocks.length < 2) {
+        if (this.state.blocks.length < 4) {
             return (
                 <Button onClick={this.runScript}>Jumpstart the Blockchain</Button>
             )

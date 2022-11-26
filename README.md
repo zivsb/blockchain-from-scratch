@@ -1,6 +1,6 @@
 <h1 align="center">ziv-project: Blockchain from Scratch - A Learning Project</h1>
 
-8-10 min video
+[![Thumbnail](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://drive.google.com/file/d/1OEcoET3Z2C5j3HeK5EYa11FuSXuo3b2t/view?usp=sharing)
 
 ## Overview
 In this project I utillized Node.js to construct a copy of Bitcoin's backend. After completing the back end I used React to make a front end for interacting with each node/wallet on the network.
