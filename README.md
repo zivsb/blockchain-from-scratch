@@ -1,4 +1,4 @@
-<h1 align="center">ziv-project: Blockchain from Scratch - A Learning Project</h1>
+<h1 align="center">Blockchain from Scratch - A Learning Project</h1>
 
 [![Thumbnail](VideoThumbnail.png)](https://drive.google.com/file/d/1OEcoET3Z2C5j3HeK5EYa11FuSXuo3b2t/view?usp=sharing)
 
